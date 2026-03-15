@@ -1,0 +1,284 @@
+/* =========================
+GLOBAL PAGE STYLE
+========================= */
+
+body{
+font-family:Poppins,sans-serif;
+margin:0;
+overflow-x:hidden;
+
+background:linear-gradient(
+to bottom,
+#ff7eb3,
+white 25%,
+white 75%,
+#ff7eb3
+);
+}
+
+
+
+/* =========================
+NEWS TICKER
+========================= */
+
+.ticker{
+
+width:100%;
+background:#ff2e83;
+color:white;
+
+font-weight:bold;
+
+height:40px;
+
+display:flex;
+align-items:center;
+
+overflow:hidden;
+}
+
+.ticker-wrapper{
+width:100%;
+overflow:hidden;
+}
+
+.ticker-text{
+
+display:inline-block;
+
+white-space:nowrap;
+
+padding-left:100%;
+
+animation:tickerScroll 18s linear infinite;
+}
+
+@keyframes tickerScroll{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-100%);
+}
+
+}
+
+.footer-ticker{
+margin-top:60px;
+}
+
+
+
+/* =========================
+HERO SECTION
+========================= */
+
+.page-hero{
+
+height:100vh;
+
+display:flex;
+flex-direction:column;
+
+align-items:center;
+justify-content:center;
+
+padding-top:40px;
+}
+
+
+
+/* =========================
+PHOTO + CIRCLE TEXT
+========================= */
+
+.photo-container{
+
+position:relative;
+
+width:300px;
+height:300px;
+
+margin:auto;
+}
+
+
+
+/* MOM PHOTO */
+
+.mom-photo{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:300px;
+height:300px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:8px solid white;
+
+box-shadow:0 0 40px rgba(255,0,128,.6);
+}
+
+
+
+/* SVG TEXT CIRCLE */
+
+.text-circle{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:350px;
+height:350px;
+
+animation:oscillateScale 10s ease-in-out infinite alternate;
+}
+
+
+
+/* CIRCLE TEXT STYLE */
+
+.circle-text{
+
+font-size:22px;
+
+font-weight:bold;
+
+letter-spacing:4px;
+
+fill:#ff2e83;
+}
+
+
+
+/* CIRCLE ANIMATION */
+
+@keyframes oscillateScale{
+
+0%{
+transform:translate(-50%,-50%) rotate(-10deg) scale(.95);
+}
+
+50%{
+transform:translate(-50%,-50%) rotate(10deg) scale(1.05);
+}
+
+100%{
+transform:translate(-50%,-50%) rotate(-10deg) scale(.95);
+}
+
+}
+
+
+
+/* =========================
+HERO MESSAGE
+========================= */
+
+.hero-message{
+
+margin-top:40px;
+
+font-size:22px;
+
+text-align:center;
+}
+
+
+
+/* =========================
+SECTION SEPARATOR
+========================= */
+
+.separator{
+
+height:4px;
+
+background:black;
+
+border:none;
+
+margin:0;
+}
+
+
+
+/* =========================
+MESSAGE SECTION
+========================= */
+
+.messages-section{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+gap:40px;
+
+padding:60px 20px;
+}
+
+
+
+/* MESSAGE CARDS */
+
+.message{
+
+background:white;
+
+border:3px solid black;
+
+border-radius:20px;
+
+padding:40px;
+
+width:90%;
+max-width:700px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+text-align:center;
+
+transition:.5s;
+}
+
+
+
+/* =========================
+FADE ANIMATION
+========================= */
+
+.fade-message{
+
+opacity:0;
+
+transform:translateY(50px);
+}
+
+.fade-message.visible{
+
+opacity:1;
+
+transform:translateY(0);
+}
